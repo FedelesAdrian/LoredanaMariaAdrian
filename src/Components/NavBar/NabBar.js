@@ -6,4 +6,4 @@ function NavBar () {
         <p>Hello</p>
     )
 }
-export default NavBar
+export default NavBar;
