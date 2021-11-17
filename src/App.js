@@ -1,22 +1,33 @@
-import "./App.css";
-import NavBar from "./Components/NavBar/NavBar";
+import './App.css';
+import NavBar from './Components/NavBar/NavBar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Components/Pages/Home';
+import Gelato from './Components/Pages/Gelato';
+import GelatoSpecial from './Components/Pages/GelatoSpecial';
+import Donuts from './Components/Pages/Donuts';
+import DonutsSpecial from './Components/Pages/DonutsSpecial';
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-      
-      </p>
-      
-    </div>
+      <div>
+      <Router>
+        <NavBar />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+
+            <Route path="/gelato" element={<Gelato /> } />
+
+            <Route path="/gelatoSpecial" element={<GelatoSpecial />} />
+
+            <Route path="/donuts" element={<Donuts />} />
+
+            <Route path="/donutsSpecial" element={<DonutsSpecial />} />
+
+            <Route path="*" element={<div> Gelato shop </div>} />
+          </Routes>
+      </Router>
+      </div>
   );
 }
 
