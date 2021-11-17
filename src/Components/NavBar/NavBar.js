@@ -12,7 +12,7 @@ import user from "././user.svg";
 
 function NavBarComponent() {
     return (
-        <Navbar expand="md">
+        <Navbar expand="md" bg="white" className="sticky-top">
             <Container fluid>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
