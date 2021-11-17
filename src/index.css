@@ -4,10 +4,16 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 
 } */
 
+html {
+min-width: 100%;
 
+min-height: 100%;
+}
 
 body {
+min-width: 100vw;
 
-    color: black;
-    
-    }
+min-height: 100vh;
+
+color: black;
+}
