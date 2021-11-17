@@ -12,7 +12,7 @@ import user from "././user.svg";
 
 function NavBarComponent() {
     return (
-        <Navbar bg="light" expand="md">
+        <Navbar expand="md">
             <Container fluid>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
@@ -32,25 +32,29 @@ function NavBarComponent() {
                     placement="start"
                 >
                     <Offcanvas.Header closeButton>
-                        <Offcanvas.Title id="offcanvasNavbarLabel">MENU</Offcanvas.Title>
+                        <Offcanvas.Title id="offcanvasNavbarLabel" className="text-center align-item-center">
+                        </Offcanvas.Title>
                     </Offcanvas.Header>
+
+                    <p className="text-center fw-bold text-black h4">MENU</p>
+                    
                     <Offcanvas.Body>
-                        <Nav className="justify-content-end flex-grow-1 pe-3">
+                        <Nav className="justify-content-end flex-grow-1 fw-bold pe-3">
                             <NavDropdown.Divider />
-                            <Nav.Link href="#" className="mx-3">
-                                Home
+                            <Nav.Link href="#" className="mx-1 pt-4 myFirstFont text-black">
+                                HOME
                             </Nav.Link>
-                            <Nav.Link href="#" className="mx-3">
-                                Gelato
+                            <Nav.Link href="#" className="mx-1 text-black">
+                                GELATO
                             </Nav.Link>
-                            <Nav.Link href="#" className="mx-2">
-                                Gelato for special needs
+                            <Nav.Link href="#" className="mx-1 text-black">
+                                GELATO FOR SPECIAL NEEDS
                             </Nav.Link>
-                            <Nav.Link href="#" className="mx-3">
-                                Donuts
+                            <Nav.Link href="#" className="mx-1 text-black">
+                                DONUTS
                             </Nav.Link>
-                            <Nav.Link href="#" className="mx-2">
-                                Donuts for special needs
+                            <Nav.Link href="#" className="mx-1 text-black">
+                                DONUTS FOR SPECIAL NEEDS
                             </Nav.Link>
                         </Nav>
 
@@ -58,12 +62,12 @@ function NavBarComponent() {
 
                         <Nav.Link
                             href="#"
-                            className="row align-items-start d-xs-inline-flex d-sm-none"
+                            className="d-xs-inline-flex d-sm-none text-black fw-bold"
                         >
                             <img
-                                width="24px"
-                                height="24px"
-                                className="img-responsive"
+                                width="16px"
+                                height="21px"
+                                className="img-responsive m-2"
                                 src={user}
                                 alt="logo"
                             />
@@ -74,12 +78,12 @@ function NavBarComponent() {
 
                         <Nav.Link
                             href="#"
-                            className="row align-items-start d-xs-inline-flex d-sm-none"
+                            className="d-xs-inline-flex d-sm-none text-black fw-bold"
                         >
                             <img
-                                width="24px"
-                                height="24px"
-                                className="img-responsive"
+                                width="16px"
+                                height="21px"
+                                className="img-responsive m-2"
                                 src={basket}
                                 alt="logo"
                             />
@@ -108,21 +112,21 @@ function NavBarComponent() {
                         <img
                             width="24px"
                             height="24px"
-                            className="img-responsive"
+                            className="img-responsive align-item-center"
                             src={user}
                             alt="logo"
                         />
-                        Account
+                        <p className="text-center">Account</p>
                     </Nav.Link>
-                    <Nav.Link href="#" className="row">
+                    <Nav.Link href="#" className="row mx-1">
                         <img
-                            width="24px"
+                            width="242px"
                             height="24px"
                             className="img-responsive"
                             src={basket}
                             alt="logo"
                         />
-                        Basket
+                        <p className="text-center">Basket</p>
                     </Nav.Link>
                 </Nav>
             </Container>
