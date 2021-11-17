@@ -1,0 +1,22 @@
+/* .hoverMenu:hover, .hoverMenu:active {
+    color: blue;
+} */
+
+.hoverMenu:link {
+    color: red;
+  }
+  
+  /* visited link */
+  .hoverMenu:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  .hoverMenu:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  .hoverMenu:active {
+    color: blue;
+  }
