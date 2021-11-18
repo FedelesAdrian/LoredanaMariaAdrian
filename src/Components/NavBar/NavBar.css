@@ -2,21 +2,10 @@
     color: blue;
 } */
 
-.hoverMenu:link {
-    color: red;
-  }
+.hoverMenu:hover {
+  color: #0069D9;
+}
   
-  /* visited link */
-  .hoverMenu:visited {
-    color: green;
-  }
-  
-  /* mouse over link */
-  .hoverMenu:hover {
-    color: hotpink;
-  }
-  
-  /* selected link */
-  .hoverMenu:active {
-    color: blue;
-  }
+.hoverMenu:active {
+  color: #0069D9;
+}

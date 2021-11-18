@@ -13,7 +13,7 @@ function NavBarComponent() {
             <Container fluid>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
-                <Navbar.Brand href="#" className="order-1 order-md-2 order-lg-1">
+                <Navbar.Brand as={Link} to="/home" className="order-1 order-md-2 order-lg-1">
                     <img width="120px" height="75px" className="img-responsive" src={gelatoLogo} alt="logo" />
                 </Navbar.Brand>
 
@@ -56,10 +56,10 @@ function NavBarComponent() {
 
                 {/* desktop menu */}
                 <Nav className="me-auto mx-3 pt-4 d-none d-md-inline-flex order-md-2 order-lg-2">
-                    <Nav.Link as={Link} to="/gelato" className=" nav-link hoverMenu mx-3"> Gelato </Nav.Link>
-                    <Nav.Link as={Link} to="/gelatoSpecial" className="mx-2 hoverMenu"> Gelato for special needs </Nav.Link>
-                    <Nav.Link as={Link} to="/donuts" className="mx-3 hoverMenu"> Donuts </Nav.Link>
-                    <Nav.Link as={Link} to="/donutsSpecial" className="mx-2 hoverMenu"> Donuts for special needs </Nav.Link>
+                    <Nav.Link as={Link} to="/gelato" className="nav-link mx-3 active "> <p className="hoverMenu ">Gelato</p> </Nav.Link>
+                    <Nav.Link as={Link} to="/gelatoSpecial" className="nav-link mx-2"> <p className="hoverMenu">Gelato for special needs</p> </Nav.Link>
+                    <Nav.Link as={Link} to="/donuts" className="nav-link mx-3 "> <p className="hoverMenu">Donuts</p> </Nav.Link>
+                    <Nav.Link as={Link} to="/donutsSpecial" className="nav-link mx-2"> <p className="hoverMenu">Donuts for special needs</p> </Nav.Link>
                 </Nav>
 
                 {/* account/basket menu */}
