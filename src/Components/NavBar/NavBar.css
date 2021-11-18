@@ -3,9 +3,42 @@
 } */
 
 .hoverMenu:hover {
-  color: #0069D9;
+	color: #0069d9;
 }
-  
+
 .hoverMenu:active {
-  color: #0069D9;
+	color: #0069d9;
+}
+.activeImageAccount {
+	display: flex;
+	justify-content: center;
+	align-item: center;
+	content: url('accountHover.svg');
+}
+
+.nonActivImageAccount {
+	display: flex;
+	justify-content: center;
+	align-item: center;
+	content: url('user.svg');
+}
+.activeTextAccount,
+.activeTextBasket {
+	color: #0069d9;
+}
+.nonActivTextAccount,
+.nonActivTextBasket {
+	color: black;
+}
+.activeImageBasket {
+	display: flex;
+	justify-content: center;
+	align-item: center;
+	content: url('basketHover.svg');
+}
+.nonActivImageBasket {
+	display: flex;
+	justify-content: center;
+	align-item: center;
+	content: url('basket.svg');
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link} from 'react-router-dom';
 import "./NavBar.css";
 import { Navbar, Container, Offcanvas, Nav, NavDropdown } from "react-bootstrap";
@@ -8,6 +8,20 @@ import user from "././user.svg";
 
 
 function NavBarComponent() {
+    const [changeAccount, setChangeAccount] = useState(false);
+    const [changeBasket, setChangeBasket] = useState(false);
+    
+
+    const handleClickAccount = () => {
+        setChangeAccount (!changeAccount);
+    }
+    
+    const handleClickBasket = () => {
+        setChangeBasket (!changeBasket);
+    }
+
+
+
     return (
         <Navbar expand="md" bg="white" className="sticky-top">
             <Container fluid>
@@ -51,6 +65,7 @@ function NavBarComponent() {
                             <img width="16px" height="21px" className="img-responsive m-2" src={basket} alt="logo" />
                             Basket
                         </Nav.Link>
+                        
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
 
@@ -64,13 +79,13 @@ function NavBarComponent() {
 
                 {/* account/basket menu */}
                 <Nav className="d-flex flex-row order-3 order-md-3 order-lg-3 ">
-                    <Nav.Link href="#" className="row d-none d-sm-inline">
-                        <img width="24px" height="24px" className="img-responsive align-item-center" src={user} alt="logo" />
-                        <p className="text-center hoverMenu">Account</p>
+                    <Nav.Link href="#" className="row d-none d-sm-inline" onClick={handleClickAccount}>
+                        <img width="24px" height="24px" className={changeAccount ? 'activeImageAccount img-responsive align-item-center' : 'nonActivImageAccount img-responsive align-item-center'}  alt="logo" />
+                        <p className= {changeAccount ? "activeTextAccount text-center hoverMenu" : "nonActivTextAccount text-center hoverMenu"}>Account</p>
                     </Nav.Link>
-                    <Nav.Link href="#" className="row mx-1">
-                        <img width="242px" height="24px" className="img-responsive" src={basket} alt="logo" />
-                        <p className="text-center hoverMenu">Basket</p>
+                    <Nav.Link href="#" className="row mx-1"onClick={handleClickBasket}>
+                        <img width="242px" height="24px" className={changeBasket ? "activeImageBasket img-responsive" : "nonActivImageBasket img-responsive"}  alt="logo" />
+                    <p className={changeBasket ? "activeTextBasket text-center hoverMenu" : "nonActivTextBasket text-center hoverMenu"}>Basket</p>
                     </Nav.Link>
                 </Nav>
             </Container>
