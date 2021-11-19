@@ -1,19 +1,10 @@
-/* body {
-
-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-
-} */
-
 html {
-min-width: 100%;
-
-min-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 body {
-min-width: 100vw;
-
-min-height: 100vh;
-
-color: black;
+    min-width: 100vw;
+    min-height: 100vh;
+    color: black;
 }

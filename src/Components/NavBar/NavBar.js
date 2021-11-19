@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import {Link} from 'react-router-dom';
 import "./NavBar.css";
 import { Navbar, Container, Offcanvas, Nav, NavDropdown } from "react-bootstrap";
-import gelatoLogo from "././gelatoLogo.svg";
-import basket from "././basket.svg";
-import user from "././user.svg";
+import gelatoLogo from "./Icons/gelatoLogo.svg";
+import basket from "./Icons/basket.svg";
+import user from "./Icons/user.svg";
 
 
 function NavBarComponent() {
@@ -28,7 +28,7 @@ function NavBarComponent() {
                 <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
                 <Navbar.Brand as={Link} to="/home" className="order-1 order-md-2 order-lg-1">
-                    <img width="120px" height="75px" className="img-responsive" src={gelatoLogo} alt="logo" />
+                    <img width="120px" height="75px" className="img-responsive" src={gelatoLogo} alt="Logo Go Home" />
                 </Navbar.Brand>
 
                 <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" lacement="start" >
@@ -54,15 +54,15 @@ function NavBarComponent() {
 
                         <NavDropdown.Divider className="d-sm-none" />
 
-                        <Nav.Link href="#" className="d-xs-inline-flex d-sm-none text-black fw-bold" >
-                            <img width="16px" height="21px" className="img-responsive m-2" src={user} alt="logo" />
+                        <Nav.Link as={Link} to="/account"  className="d-xs-inline-flex d-sm-none text-black fw-bold" >
+                            <img width="16px" height="21px" className="img-responsive m-2" src={user} alt="Account Icon" />
                             Account
                         </Nav.Link>
 
                         <NavDropdown.Divider className="d-sm-none" />
 
-                        <Nav.Link href="#" className="d-xs-inline-flex d-sm-none text-black fw-bold" >
-                            <img width="16px" height="21px" className="img-responsive m-2" src={basket} alt="logo" />
+                        <Nav.Link as={Link} to="/basket" className="d-xs-inline-flex d-sm-none text-black fw-bold" >
+                            <img width="16px" height="21px" className="img-responsive m-2" src={basket} alt="Basket Icon" />
                             Basket
                         </Nav.Link>
                         
@@ -79,12 +79,12 @@ function NavBarComponent() {
 
                 {/* account/basket menu */}
                 <Nav className="d-flex flex-row order-3 order-md-3 order-lg-3 ">
-                    <Nav.Link href="#" className="row d-none d-sm-inline" onClick={handleClickAccount}>
-                        <img width="24px" height="24px" className={changeAccount ? 'activeImageAccount img-responsive align-item-center' : 'nonActivImageAccount img-responsive align-item-center'}  alt="logo" />
+                    <Nav.Link as={Link} to="/account" className="row d-none d-sm-inline" onClick={handleClickAccount}>
+                        <img width="24px" height="24px" className={changeAccount ? 'activeImageAccount img-responsive align-item-center' : 'nonActivImageAccount img-responsive align-item-center'}  alt="Account Icon" />
                         <p className= {changeAccount ? "activeTextAccount text-center hoverMenu" : "nonActivTextAccount text-center hoverMenu"}>Account</p>
                     </Nav.Link>
-                    <Nav.Link href="#" className="row mx-1"onClick={handleClickBasket}>
-                        <img width="242px" height="24px" className={changeBasket ? "activeImageBasket img-responsive" : "nonActivImageBasket img-responsive"}  alt="logo" />
+                    <Nav.Link as={Link} to="/basket"  className="row mx-1"onClick={handleClickBasket}>
+                        <img width="242px" height="24px" className={changeBasket ? "activeImageBasket img-responsive" : "nonActivImageBasket img-responsive"}  alt="Basket Icon" />
                     <p className={changeBasket ? "activeTextBasket text-center hoverMenu" : "nonActivTextBasket text-center hoverMenu"}>Basket</p>
                     </Nav.Link>
                 </Nav>
