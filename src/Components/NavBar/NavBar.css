@@ -3,47 +3,47 @@
 } */
 
 .hoverMenu:hover {
-	color: #0069d9;
+  color: #0069d9;
 }
 
 .hoverMenu:active {
-	color: #0069d9;
+  color: #0069d9;
 }
 
 .activeImageAccount {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	content: url('./Icons/accountHover.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("./Icons/accountHover.svg");
 }
 
 .nonActivImageAccount {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	content: url('./Icons/user.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("./Icons/user.svg");
 }
 
 .activeTextAccount,
 .activeTextBasket {
-	color: #0069d9;
+  color: #0069d9;
 }
 
 .nonActivTextAccount,
 .nonActivTextBasket {
-	color: black;
+  color: black;
 }
 
 .activeImageBasket {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	content: url('./Icons/basketHover.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("./Icons/basketHover.svg");
 }
 
 .nonActivImageBasket {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	content: url('./Icons/basket.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("./Icons/basket.svg");
 }
