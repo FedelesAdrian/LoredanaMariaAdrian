@@ -2,17 +2,17 @@ import React from 'react';
 import './Cards.css'
 import gelatoHome from '../Images/gelatoHome.png';
 
-const Cards = () => {
+const Cards = (props) => {
   return (
-      
-    <div className="card cardSize text-white"> 
-      <img className="card-img cardOverlay" src={gelatoHome} alt="Card image"/>
-      <div className="card-img-overlay centerOverlay">
-        <h5 className="card-title ">Ice cream</h5>
-        <button className="btn btn-outline-light">Explore options</button>
+    <div >
+        <div className="card cardSize text-white ">
+          < img className="card-img cardOverlay " src={props.image} alt="Card image" />
+          <div className="card-img-overlay centerOverlay">
+            <h5 className="card-title ">{props.title}</h5>
+            <button className="btn btn-outline-light"> {props.btnName}</button>
+          </div>
+        </div>
       </div>
-    </div>
-    
   );
 };
 
